@@ -1,19 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-
+</head>
 <body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Flask
-            </p>
-            <p class="small">
-                Edit <code>templates/index.html</code> and refresh to see your changes!
-            </p>
-        </header>
-    </div>
-</body>
+    
+    <h1>Hola A todos bienvenidos a mi Pagina</h1>
 
+    <!-- title -variable proveniente de app.py -->
+    <h2>{{ title }}</h2>
+
+    <!-- nombres - una variable de tipo list proveniente de app.py -->
+
+    {% for nombre in nombres  %}
+    <li>{{ nombre }}</li>
+    {% endfor %}
+
+    <img src="https://images.ctfassets.net/j3p2t3c1h19y/20rXWIpny7SL84AilmpfMX/f7e4617907301e220cfba14dfaeeb4e7/PAM_ALL_AD05_PE02__2_.webp?fm=webp&q=70" alt="">
+
+</body>
 </html>
